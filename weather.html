@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search the weather for any city.">
+  <title>Weather App | Chirakala Sanjana</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">API Apps</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="weather.html" class="active">Weather</a></li>
+        <li><a href="movies.html">Movies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Weather App</h1>
+
+    <form id="weather-form" class="search-form" role="search">
+      <label for="city-input" class="sr-only">City name</label>
+      <input id="city-input" type="text" placeholder="Enter a city, e.g. Hyderabad" autocomplete="off" required>
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite">Search for a city to see its weather.</p>
+
+    <section id="weather-result" class="hidden" aria-live="polite"></section>
+    <section id="forecast" class="forecast hidden" aria-label="5-day forecast"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (no API key needed).</p>
+  </footer>
+
+  <script type="module" src="js/weather.js"></script>
+</body>
+</html>
